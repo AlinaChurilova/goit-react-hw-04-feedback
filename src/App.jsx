@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import s from './Feedback/Feedback.module.css';
-import Statistics from './Feedback/Statistics';
-import Section from './Feedback/Section';
-import Notification from './Feedback/Notification';
-import FeedbackOptions from './Feedback/FeedbackOptions';
+import Statistics from './components/Statistics';
+import Section from './components/Section';
+import Notification from './components/Notification';
+import FeedbackOptions from './components/FeedbackOptions';
+import './index.css';
 
 export default function App() {
 
@@ -47,7 +47,7 @@ export default function App() {
   const positivePercentage = countPositiveFeedbackPercentage();
 
   return (
-    <div className={s.Container}>
+    <div className='Container'>
        <Section title="Please leave feedback">
           <FeedbackOptions
           options={['good', 'neutral', 'bad']}
